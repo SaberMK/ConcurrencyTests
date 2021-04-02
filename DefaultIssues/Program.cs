@@ -35,6 +35,10 @@ namespace DefaultIssues
                     case "5":
                         DeadlockMonitor_TryEnter_Solution.Do();
                         break;
+
+                    case "6":
+                        WaitAndPulseExamples.Do();
+                        break;
                 }
 
                 Console.WriteLine("To continue press ANY KEY (keep in mind that RESET/POWER does not count)");

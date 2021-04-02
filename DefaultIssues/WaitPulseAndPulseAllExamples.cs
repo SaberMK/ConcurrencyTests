@@ -27,6 +27,8 @@ namespace DefaultIssues
                         counter++;
                         result = arg.ToString();
                         Monitor.Pulse(lockHandle);
+
+                        // Wait(lock) <- this method releases lock, and waits untill someone would call Pulse(...) or PulseAll(...)
                         Monitor.Wait(lockHandle);
                     }
                 }
