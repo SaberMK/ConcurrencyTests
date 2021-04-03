@@ -26,6 +26,9 @@ namespace DefaultIssues
                     {
                         counter++;
                         result = arg.ToString();
+
+                        // Pulse - calls first thread, that waits to be awaken
+                        // PulseAll - calls all threads to be awaken
                         Monitor.Pulse(lockHandle);
 
                         // Wait(lock) <- this method releases lock, and waits untill someone would call Pulse(...) or PulseAll(...)
